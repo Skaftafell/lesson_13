@@ -1,0 +1,132 @@
+.wrapper {
+   background-image: url(../images/bg.webp);
+}
+
+.logo {
+   display: block;
+   margin: 0 auto;
+}
+/* ===MAIN=== */
+h1 {
+   color: rgba(51, 51, 51, 0.036);
+   font-size: 150px;
+   position: absolute;
+   top:35%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-transform: uppercase;
+}
+
+h1::before {
+   content:attr(content);
+   position: absolute;
+   width: 120px;
+   overflow: hidden;
+   white-space: nowrap;
+   border-right: 3px solid white;
+   color: #fff;
+   animation: shift 5s linear infinite;
+   filter: drop-shadow(0 0 20px #0ff);
+}
+
+@keyframes shift {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
+   }
+}
+
+.btn {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 10px 20px;
+   border: 3px solid #0ff; 
+   border-radius: 10px;
+   color: #fff;
+   text-transform: capitalize;
+   font-size: 20px;
+}
+
+.btn:hover {
+   filter: drop-shadow(0 0 20px #0ff);
+}
+
+
+
+/* book */
+.bk {
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.book {
+   width: 300px;
+   height: 420px;
+   background: #f5f068;
+   padding-left: 40px;
+   position: relative;
+   left: 50%;
+   top: 50%;
+   transform: translateX(-50%);
+   perspective: 1000px;
+   opacity: 0;
+   transition: all 3s ease;
+   transition-delay: 1s;
+}
+.book:hover {
+   opacity: 1;
+}
+
+.book__cover {
+   width: 270px;
+   height: 100%;
+   position: absolute;
+   left: 40px;
+   background-color: rgb(16, 10, 180);
+   transform: rotateY(0deg);
+   transform-style: preserve-3d;
+   transform-origin: left;
+   transition: all 1s ease-in;
+   
+}
+
+.book__cover:active {
+   transform: rotateY(-180deg);
+}
+
+figure {
+   margin: 0;
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+}
+
+figure.front {
+   background: url(../images/yaroslav_mudry.webp);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+figure.back {
+   transform: rotateY(180deg);
+}
+
+.book__text {
+   padding: 10px;
+   font-size: 33px;
+   color: #333;
+}
+/* /book */
+/* ===/MAIN=== */
+.val {
+   display: block;
+   margin: 0 auto;
+}
